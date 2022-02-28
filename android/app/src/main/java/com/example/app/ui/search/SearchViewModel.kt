@@ -1,13 +1,13 @@
-package com.example.app.ui.home
+package com.example.app.ui.search
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class HomeViewModel : ViewModel() {
+class SearchViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is home Fragment"
+        value = "This is Search Fragment"
     }
     val text: LiveData<String> = _text
 }

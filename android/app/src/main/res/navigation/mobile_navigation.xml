@@ -2,24 +2,24 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    android:id="@+id/list_navigation"
+    app:startDestination="@+id/nav_list">
 
     <fragment
-        android:id="@+id/nav_home"
-        android:name="com.example.app.ui.home.HomeFragment"
-        android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/nav_list"
+        android:name="com.example.app.ui.list.ListFragment"
+        android:label="@string/menu_list"
+        tools:layout="@layout/fragment_list" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.app.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:id="@+id/nav_create"
+        android:name="com.example.app.ui.create.CreateFragment"
+        android:label="@string/menu_create"
+        tools:layout="@layout/fragment_create" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.app.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_search"
+        android:name="com.example.app.ui.search.SearchFragment"
+        android:label="@string/menu_search"
+        tools:layout="@layout/fragment_search" />
 </navigation>
