@@ -6,8 +6,10 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"os"
 
 	"github.com/gofrs/uuid"
+	"github.com/joho/godotenv"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 	"mongo.api/core"
@@ -17,9 +19,12 @@ import (
 
 func main() {
 
-	core.MongoDBInfo.URI = "mongodb+srv://admin:administrator@cluster0.gjj7f.mongodb.net/test"
+	err := godotenv.Load(".env")
+	utils.CheckError(err)
 
-	//ctx, cancel := context.WithTimeout(context.Background(), 30*time.Second)
+
+	core.MongoDBInfo.URI = os.Getenv("MONGO_URL")
+
 	ctx, cancel := context.WithCancel(context.Background())
 	defer cancel()
 	core.MongoDBInfo.Ctx = ctx
